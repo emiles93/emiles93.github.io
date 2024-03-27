@@ -1,0 +1,29 @@
+/* Untitled-1.css */
+
+/* Bio Section */
+.bio-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #ccc; /* Gray background color */
+}
+
+/* YouTube Video Embed */
+.video-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Links to various projects */
+.project-link {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: red; /* Red background color */
+  color: white;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  background-color: darkred; /* Dark red background color on hover */
+}
