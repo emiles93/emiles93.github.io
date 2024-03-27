@@ -1,60 +1,29 @@
-/* GLOBAL STYLES */
-body {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    color: rgb(var(--bs-tertiary-color-rgb));
-  }
-  
-  /* CUSTOMIZE THE CAROUSEL */
-  .carousel {
-    margin-bottom: 4rem;
-  }
-  
-  .carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-  }
-  
-  .carousel-item {
-    height: 32rem;
-  }
-  
-  /* MARKETING CONTENT */
-  .marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .marketing .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-  }
-  
-  /* Featurettes */
-  .featurette-divider {
-    margin: 5rem 0;
-  }
-  
-  .featurette-heading {
-    letter-spacing: -.05rem;
-  }
-  
-  /* RESPONSIVE CSS */
-  @media (min-width: 40em) {
-    .carousel-caption p {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.4;
-    }
-  
-    .featurette-heading {
-      font-size: 50px;
-    }
-  }
-  
-  @media (min-width: 62em) {
-    .featurette-heading {
-      margin-top: 7rem;
-    }
-  }
-  
+/* CSS styles for your webpage */
+
+/* Bio section styles */
+.bio-section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f5f6f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Link styles */
+.project-link {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #5468ff; /* Adjust color as needed */
+  background-color: #ffef96; /* Adjust background color as needed */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #ffd700; /* Adjust hover background color as needed */
+}
