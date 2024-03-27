@@ -1,0 +1,29 @@
+/* CSS styles for your webpage */
+
+/* Bio section styles */
+.bio-section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f5f6f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Link styles */
+.project-link {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #5468ff; /* Adjust color as needed */
+  background-color: #ffef96; /* Adjust background color as needed */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #ffd700; /* Adjust hover background color as needed */
+}
