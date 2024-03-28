@@ -18,7 +18,6 @@ body {
   border-radius: 10px; /* Soften edges */
 }
 
-/* Bio placeholder */
 .bio-placeholder {
   position: relative; /* Add relative positioning */
   margin-top: -250px; /* Adjust as needed to move the placeholder up */
@@ -187,4 +186,59 @@ body {
 /* Hover effect for button */
 #myButton:hover {
   filter: brightness(1.2); /* Increase brightness on hover */
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  /* Adjust styles for mobile devices */
+  .bio-section {
+    margin-top: 100px; /* Reduce margin-top for bio section */
+    margin-left: 0; /* Remove negative margin-left */
+  }
+
+  .bio-placeholder {
+    margin-top: -100px; /* Reduce margin-top for bio placeholder */
+    margin-left: 0; /* Remove negative margin-left */
+    width: 80%; /* Adjust width for smaller screens */
+  }
+
+  .video-container {
+    position: relative; /* Change position to relative */
+    top: auto; /* Reset top position */
+    right: auto; /* Reset right position */
+    margin-bottom: 20px; /* Reduce margin-bottom */
+  }
+
+  .contact-links {
+    position: static; /* Reset position to static */
+    display: block; /* Change display to block */
+    text-align: center; /* Center align contact links */
+    margin-top: 20px; /* Add margin-top */
+  }
+
+  .contact-links h3,
+  .contact-links h4 {
+    font-size: 24px; /* Reduce font size for contact links */
+  }
+
+  .project-links {
+    position: static; /* Reset position to static */
+    display: block; /* Change display to block */
+    text-align: center; /* Center align project links */
+    margin-top: 20px; /* Add margin-top */
+  }
+
+  .project-link {
+    font-size: 18px; /* Reduce font size for project links */
+  }
+
+  .github-header {
+    top: 20px; /* Adjust top position for GitHub header */
+    font-size: 48px; /* Reduce font size for GitHub header */
+  }
+
+  #myButton {
+    top: 20px; /* Adjust top position for button */
+    font-size: 14px; /* Reduce font size for button */
+  }
 }
