@@ -9,7 +9,8 @@ body {
 
 /* Bio Section */
 .bio-section {
-  margin-top: 20px; /* Adjust margin-top for bio section */
+  margin-top: 260px; /* Adjust as needed to move the bio section up */
+  margin-left: -250px; /* Adjust as needed to move the bio section to the left */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,8 +19,11 @@ body {
 }
 
 .bio-placeholder {
-  width: 100%; /* Adjust width for full width */
-  height: auto; /* Allow height to adjust */
+  position: relative; /* Add relative positioning */
+  margin-top: -250px; /* Adjust as needed to move the placeholder up */
+  margin-left: -250px; /* Adjust as needed to move the placeholder to the left */
+  width: 400px; /* Adjust width as needed */
+  height: 300px; /* Extend the height to make the bottom slightly longer */
   background: linear-gradient(to bottom right, #4d8ac7, #336699); /* Darker blue gradient background */
   text-align: center;
   padding: 20px;
@@ -28,24 +32,54 @@ body {
 }
 
 .bio-placeholder p {
-  margin-top: 0; /* Reset margin-top for paragraphs */
+  position: relative; /* Add relative positioning */
+  top: -5px; /* Adjust as needed to move the text up within the box */
 }
 
 /* YouTube Video Embed */
 .video-container {
-  width: 100%; /* Adjust width for full width */
-  margin-bottom: 20px; /* Increase margin-bottom for space */
+  position: absolute;
+  top: 260px; /* Adjust as needed to move the video embed up */
+  right: 250px; /* Adjust as needed to move the video embed to the right */
+  margin-bottom: 60px; /* Increase margin to add space between the bio section and the video */
+  border-radius: 15px 15px 30px 30px; /* Round off the bottom corners more */
+  overflow: hidden; /* Hide overflowing content */
 }
 
 /* Contact links */
 .contact-links {
-  text-align: center; /* Center align contact links */
-  margin-top: 20px; /* Add margin-top */
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around; /* Evenly space items */
+  border-radius: 10px; /* Soften edges */
 }
 
 .contact-links h3,
 .contact-links h4 {
-  font-size: 24px; /* Reduce font size for contact links */
+  margin: 0 10px; /* Add spacing between contact links */
+  font-size: 35px; /* Triple the font size */
+}
+
+/* Gradient green background for contact links */
+.contact-links a {
+  background: linear-gradient(to right, #004d40, #81c784); /* Gradient green background */
+  padding: 10px 20px; /* Add padding to increase clickable area */
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+/* Change color of visited links */
+.contact-links a:visited {
+  color: white; /* Keep visited links white */
+}
+
+/* Hover effect */
+.contact-links a:hover {
+  filter: brightness(1.2); /* Increase brightness on hover */
 }
 
 /* Circular image placeholder */
@@ -55,35 +89,101 @@ body {
   background-color: lightgray; /* Placeholder background color */
   border-radius: 50%; /* Make it circular */
   margin-top: 20px; /* Add margin from the top */
-  margin-bottom: 20px; /* Add margin from the bottom */
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
+  margin-left: 20px; /* Move the placeholder to the far left */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+/* Circular image placeholder img */
+.image-placeholder img {
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Automatically adjust the height */
+  object-fit: cover; /* Prevent distortion of the image */
+  position: relative; /* Make the image position relative */
+  top: 65%; /* Move the image down by 20% of the container height */
+  transform: translateY(-50%); /* Adjust vertical positioning */
 }
 
 /* Project links */ 
 .project-links {
-  text-align: center; /* Center align project links */
-  margin-top: 20px; /* Add margin-top */
+  position: absolute;
+  bottom: 60px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around; /* Evenly space items */
 }
 
 .project-link {
-  font-size: 18px; /* Reduce font size for project links */
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  margin: 0 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px; /* Increase the font size */
+  background: linear-gradient(to right, #00b4db, #0083B0); /* Gradient background */
+  border-radius: 15px; /* Round off the edges */
+}
+
+/* Hover effect for project links */
+.project-link:hover {
+  filter: brightness(1.2); /* Increase brightness on hover */
+}
+
+/* Define different gradient backgrounds for each project link */
+.project-link:nth-child(1) {
+  background: linear-gradient(to right, #00b4db, #0083B0); /* Gradient for first project link */
+}
+
+.project-link:nth-child(2) {
+  background: linear-gradient(to right, #DA4453, #89216B); /* Gradient for second project link */
+}
+
+.project-link:nth-child(3) {
+  background: linear-gradient(to right, #0B486B, #F56217); /* Gradient for third project link */
+}
+
+.project-link:hover {
+  filter: brightness(1.2); /* Increase brightness on hover */
 }
 
 /* GitHub portfolio project header */
 .github-header {
-  font-size: 48px; /* Reduce font size for GitHub header */
+  position: absolute;
+  top: 50px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 69px; /* Increase the font size */
+  color: transparent; /* Make text transparent */
+  background: linear-gradient(to right, #6A0DAD, #C77BFF); /* Gradient purple background */
+  -webkit-background-clip: text; /* Clip text to background */
+  background-clip: text; /* Clip text to background */
+  font-family: 'Space Grotesk', sans-serif; /* Change font to Space Grotesk */
+}
+
+/* Poem styling */
+#poem {
+  margin-top: 20px; /* Adjust top margin as needed */
+  text-align: center; /* Center the text */
 }
 
 /* Button styling */
 #myButton {
-  width: 100%; /* Adjust width for full width */
+  position: absolute; /* Position the button absolutely */
+  top: 30px; /* Adjust the top position as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
   padding: 10px 20px; /* Add padding to increase clickable area */
-  margin-top: 20px; /* Add margin-top */
   background: linear-gradient(to right, #d4f7fe, #bbbdbe); /* Gradient background */
   color: rgb(8, 8, 8); /* Text color */
   border: none; /* Remove border */
   border-radius: 5px; /* Add border radius for rounded corners */
   font-size: 16px; /* Adjust the font size */
   cursor: pointer; /* Show pointer cursor on hover */
+  border-radius: 10px; /* Soften edges */
+}
+
+/* Hover effect for button */
+#myButton:hover {
+  filter: brightness(1.2); /* Increase brightness on hover */
 }
