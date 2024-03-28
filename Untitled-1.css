@@ -37,8 +37,6 @@ body {
   top: -5px; /* Adjust as needed to move the text up within the box */
 }
 
-
-
 /* YouTube Video Embed */
 .video-container {
   position: absolute;
@@ -48,7 +46,6 @@ body {
   border-radius: 15px 15px 30px 30px; /* Round off the bottom corners more */
   overflow: hidden; /* Hide overflowing content */
 }
-
 
 /* Contact links */
 .contact-links {
@@ -133,7 +130,6 @@ body {
 .project-link:hover {
   filter: brightness(1.2); /* Increase brightness on hover */
 }
-
 
 /* Define different gradient backgrounds for each project link */
 .project-link:nth-child(1) {
