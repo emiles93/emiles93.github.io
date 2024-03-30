@@ -96,6 +96,32 @@
                 button.textContent = "Click me"; // Change button text back to "Click me"
             }
         }
+
+        // Function to open the PacMan game in a pop-up window
+        function openPacManGame() {
+            var url = "https://emiles93.github.io/PacManExercise/";
+            openProjectInPopup(url);
+        }
+
+        // Function to open the Eye Movement Project in a pop-up window
+        function openEyeMovementProject() {
+            var url = "https://emiles93.github.io/EyeMovement/";
+            openProjectInPopup(url);
+        }
+
+        // Function to open the BusTracker project in a pop-up window
+        function openBusTracker() {
+            var url = "https://emiles93.github.io/BusTracker/";
+            openProjectInPopup(url);
+        }
+
+        // Function to open a project in a pop-up window
+        function openProjectInPopup(url) {
+            var popup = window.open(url, "_blank", "width=800,height=600,scrollbars=no,resizable=no");
+            if (popup) {
+                popup.focus();
+            }
+        }
     </script>
 </body>
 </html>
