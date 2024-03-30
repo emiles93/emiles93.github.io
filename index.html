@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Portfolio Project</title>
+    <link rel="stylesheet" href="Untitled-1.css">
+    <style>
+        /* Add CSS animation for glowing text */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff;
+            }
+            50% {
+                text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff, 0 0 80px #0ff;
+            }
+            100% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff;
+            }
+        }
+
+        /* Apply animation to poem text */
+        #poem.glowing {
+            animation: glow 1s infinite alternate; /* Apply the glow animation */
+        }
+    </style>
+</head>
+<body>
+    <!-- Circular image placeholder at the top left -->
+    <div class="image-placeholder">
+        <img src="IMG_8274.jpeg" alt="Profile Picture">
+    </div>
+
+    <!-- YouTube video embed and bio placeholder -->
+    <section class="bio-section">
+        <!-- Highlighted bio placeholder with sample text -->
+        <div class="bio-placeholder">
+            <p>With over 12 years of experience in corporate finance, I'm poised for a transition into the tech industry. Building my own computer during the pandemic ignited a deep fascination for technology. Since childhood, I've been captivated by computers, evident in my early feats like bypassing local library logins at age 12 and managing a thriving online forum with 150 active users by age 13. I am currently enrolled in the MIT xPro Full Stack Software Dev program.</p>
+            <p>I have now worked at JPMorgan, Wells Fargo, MUFG Union Bank and Regions Financial. I am interested in transitioning to tech within the finance industry as well as outside. Taking care of people's needs and goals has been a top priority in my career and I would love to make that happen in the development world as well.</p>
+        </div>
+        <div class="video-container">
+            <!-- YouTube Video Embed -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Links to various projects -->
+    <div class="project-links">
+        <!-- Update the PacMan project link to trigger the openPacManGame function -->
+        <a href="#" class="project-link" onclick="openPacManGame()">PacMan Project</a>
+        <a href="#" class="project-link" onclick="openEyeMovementProject()">Eye Movement Project</a>
+        <a href="#" class="project-link" onclick="openBusTracker()">Bus Movement Project</a>
+    </div>
+
+    <!-- Contact links below project links -->
+    <div class="contact-links">
+        <h3><a href="mailto:ethanmiles93@gmail.com">Email Me</a></h3>
+        <h4><a href="https://www.linkedin.com/in/ethan-p-094573194/">LinkedIn</a></h4>
+        <h4><a href="https://github.com/emiles93">GitHub</a></h4>
+    </div>
+
+    <!-- GitHub portfolio project header -->
+    <h2 class="github-header">GitHub Portfolio Project</h2>
+
+    <!-- Click me button and poem display -->
+    <div style="position: relative;">
+        <button id="myButton" style="margin-bottom: 10px;" onclick="togglePoem()">Click me</button>
+        <p id="poem" style="display: none; margin-top: 10px; text-align: center;"></p>
+    </div>
+
+    <script>
+        // JavaScript code here
+        var currentLine = 0; // Variable to store the current line of the poem
+        var poemLines = [
+            "In boardrooms where minds convene,",
+            "Ideas flourish, sleek and keen.",
+            "Strategies formed, bold and wise,",
+            "For paths to success, they devise."
+        ]; // Array to store lines of the poem
+
+        // Function to toggle poem display
+        function togglePoem() {
+            var button = document.getElementById("myButton");
+            var poem = document.getElementById("poem");
+
+            if (currentLine < poemLines.length) {
+                poem.textContent = poemLines[currentLine]; // Set poem text to current line
+                poem.style.display = "block"; // Show poem display
+                poem.classList.add("glowing"); // Add class to enable glowing effect
+                currentLine++; // Move to the next line of the poem
+                button.textContent = "Next"; // Change button text to "Next"
+            } else {
+                poem.style.display = "none"; // Hide poem display
+                poem.classList.remove("glowing"); // Remove glowing effect
+                currentLine = 0; // Reset line counter
+                button.textContent = "Click me"; // Change button text back to "Click me"
+            }
+        }
+    </script>
+</body>
+</html>
